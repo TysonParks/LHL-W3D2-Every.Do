@@ -15,5 +15,7 @@
 @property (nonatomic) NSUInteger priorityNumber;
 @property (nonatomic) BOOL isCompleted;
 
+// Custom init
+-(instancetype)initWithTitle:(NSString *) title todoDescription:(NSString *) todoDescript priority: (NSUInteger) priorityNumber;
 
 @end
