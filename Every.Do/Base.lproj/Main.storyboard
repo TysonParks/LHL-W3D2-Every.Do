@@ -63,6 +63,64 @@
             </objects>
             <point key="canvasLocation" x="1455" y="-630"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sOd-F6-XRb">
+            <objects>
+                <viewController id="g7w-JA-feS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="if5-yt-ldz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jhm-vr-Ku3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GOR-z8-q7X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of Todo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ew-k8-7me" userLabel="Title TextField">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UNW-Iy-L4n"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Priority" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQL-UI-HP3" userLabel="Pritority TextField">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lox-yC-6CC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qjg-dU-ZS8" userLabel="Todo Description">
+                                <rect key="frame" x="16" y="96" width="343" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WRl-Bh-Yo9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sQL-UI-HP3" secondAttribute="trailing" id="7Uv-tC-l8Y"/>
+                            <constraint firstAttribute="trailing" secondItem="qjg-dU-ZS8" secondAttribute="trailing" constant="16" id="BBZ-ab-sVB"/>
+                            <constraint firstItem="sQL-UI-HP3" firstAttribute="leading" secondItem="GOR-z8-q7X" secondAttribute="leadingMargin" id="Nec-TF-2Jm"/>
+                            <constraint firstItem="5ew-k8-7me" firstAttribute="top" secondItem="if5-yt-ldz" secondAttribute="bottom" id="Yz4-HR-h9l"/>
+                            <constraint firstItem="5ew-k8-7me" firstAttribute="trailing" secondItem="GOR-z8-q7X" secondAttribute="trailingMargin" id="gSC-VP-iz5"/>
+                            <constraint firstItem="qjg-dU-ZS8" firstAttribute="leading" secondItem="GOR-z8-q7X" secondAttribute="leading" constant="16" id="jaI-T2-YSb"/>
+                            <constraint firstItem="5ew-k8-7me" firstAttribute="centerX" secondItem="GOR-z8-q7X" secondAttribute="centerX" id="kRi-gy-kQm"/>
+                            <constraint firstItem="sQL-UI-HP3" firstAttribute="top" secondItem="5ew-k8-7me" secondAttribute="bottom" constant="8" id="m7a-HV-TCA"/>
+                            <constraint firstItem="qjg-dU-ZS8" firstAttribute="top" secondItem="sQL-UI-HP3" secondAttribute="bottom" constant="8" id="yb6-Mu-iuW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEx-kh-9P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.5999999999999" y="-1329.0854572713645"/>
+        </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
@@ -150,10 +208,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <segue destination="g7w-JA-feS" kind="presentation" id="TMi-NT-iXR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="-630.13493253373315"/>
+            <point key="canvasLocation" x="732" y="-630"/>
         </scene>
     </scenes>
 </document>

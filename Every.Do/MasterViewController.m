@@ -60,8 +60,9 @@
     if (!self.todoObjects) {
         self.todoObjects = [[NSMutableArray alloc] init];
     }
-
-//    [self.todoObjects insertObject:[Todo *todo] atIndex:0]; //Fix Object
+    
+    
+//    [self.todoObjects insertObject:*newTodo atIndex:0]; //Fix Object
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 //    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
