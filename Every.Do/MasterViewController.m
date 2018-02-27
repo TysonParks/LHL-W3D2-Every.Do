@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
-@interface MasterViewController ()
+@interface MasterViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property NSMutableArray <Todo *> *todoObjects;
 
@@ -27,7 +27,13 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    // Starter Todos
+    // Assign self to delegate and datasource
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    
+    
+    // Init starter Todos
     Todo *buyMilk = [[Todo alloc]initWithTitle:@"Buy Milk" todoDescription:@"We need whole milk and 1%. Both should be organic!" priority:10];
     
     Todo *cleanOffice = [[Todo alloc]initWithTitle:@"Clean Office" todoDescription:@"Need to vacuum and leave extra time to clean the desk with windex" priority:6];
@@ -36,6 +42,8 @@
     
     // Instanciate Todo objects array
     self.todoObjects = [[NSMutableArray alloc]initWithObjects:buyMilk, cleanOffice, catchUp, nil];
+    
+    
     
     
     // Call cell setup method
