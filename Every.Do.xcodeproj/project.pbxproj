@@ -16,6 +16,7 @@
 		AD21A2172045EA6E00B3F16E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD21A2162045EA6E00B3F16E /* main.m */; };
 		AD21A21F2045EA8900B3F16E /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD21A21E2045EA8900B3F16E /* Todo.m */; };
 		AD2973CB2045EF520047CAAD /* TodoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2973CA2045EF520047CAAD /* TodoTableViewCell.m */; };
+		AD2973CE20461AEC0047CAAD /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2973CD20461AEC0047CAAD /* EditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		AD21A21E2045EA8900B3F16E /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		AD2973C92045EF520047CAAD /* TodoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoTableViewCell.h; sourceTree = "<group>"; };
 		AD2973CA2045EF520047CAAD /* TodoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoTableViewCell.m; sourceTree = "<group>"; };
+		AD2973CC20461AEC0047CAAD /* EditorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
+		AD2973CD20461AEC0047CAAD /* EditorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				AD21A2042045EA6E00B3F16E /* AppDelegate.h */,
 				AD21A2052045EA6E00B3F16E /* AppDelegate.m */,
 				AD21A20D2045EA6E00B3F16E /* Main.storyboard */,
+				AD2973CC20461AEC0047CAAD /* EditorViewController.h */,
+				AD2973CD20461AEC0047CAAD /* EditorViewController.m */,
 				AD21A2072045EA6E00B3F16E /* MasterViewController.h */,
 				AD21A2082045EA6E00B3F16E /* MasterViewController.m */,
 				AD21A20A2045EA6E00B3F16E /* DetailViewController.h */,
@@ -163,6 +168,7 @@
 				AD21A2062045EA6E00B3F16E /* AppDelegate.m in Sources */,
 				AD21A2172045EA6E00B3F16E /* main.m in Sources */,
 				AD21A20C2045EA6E00B3F16E /* DetailViewController.m in Sources */,
+				AD2973CE20461AEC0047CAAD /* EditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
