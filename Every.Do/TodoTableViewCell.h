@@ -10,7 +10,8 @@
 
 @interface TodoTableViewCell : UITableViewCell
 
-
-
+@property (weak, nonatomic) IBOutlet UILabel *todoTitle;
+@property (weak, nonatomic) IBOutlet UILabel *todoPriority;
+@property (weak, nonatomic) IBOutlet UIButton *todoCompleted;
 
 @end

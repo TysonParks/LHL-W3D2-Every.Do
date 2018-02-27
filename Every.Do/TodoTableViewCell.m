@@ -8,6 +8,12 @@
 
 #import "TodoTableViewCell.h"
 
+@interface TodoTableViewCell ()
+
+
+
+
+
 @implementation TodoTableViewCell
 
 - (void)awakeFromNib {

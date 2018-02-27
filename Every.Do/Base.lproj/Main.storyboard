@@ -120,6 +120,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="todoCompleted" destination="QQR-M7-2yn" id="fgh-oI-YKf"/>
+                                    <outlet property="todoPriority" destination="5dc-Oh-2Hd" id="EwX-a6-V1J"/>
+                                    <outlet property="todoTitle" destination="tXe-tD-DAO" id="ByI-ug-6n6"/>
                                     <segue destination="JEX-9P-axG" kind="show" identifier="showDetail" id="3g5-t3-D5n"/>
                                 </connections>
                             </tableViewCell>
