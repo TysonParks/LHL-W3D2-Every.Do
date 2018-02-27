@@ -48,8 +48,6 @@
 		AD21A1F82045EA6E00B3F16E = {
 			isa = PBXGroup;
 			children = (
-				AD21A21D2045EA8900B3F16E /* Todo.h */,
-				AD21A21E2045EA8900B3F16E /* Todo.m */,
 				AD21A2032045EA6E00B3F16E /* Every.Do */,
 				AD21A2022045EA6E00B3F16E /* Products */,
 			);
@@ -68,11 +66,13 @@
 			children = (
 				AD21A2042045EA6E00B3F16E /* AppDelegate.h */,
 				AD21A2052045EA6E00B3F16E /* AppDelegate.m */,
+				AD21A20D2045EA6E00B3F16E /* Main.storyboard */,
 				AD21A2072045EA6E00B3F16E /* MasterViewController.h */,
 				AD21A2082045EA6E00B3F16E /* MasterViewController.m */,
 				AD21A20A2045EA6E00B3F16E /* DetailViewController.h */,
 				AD21A20B2045EA6E00B3F16E /* DetailViewController.m */,
-				AD21A20D2045EA6E00B3F16E /* Main.storyboard */,
+				AD21A21D2045EA8900B3F16E /* Todo.h */,
+				AD21A21E2045EA8900B3F16E /* Todo.m */,
 				AD21A2102045EA6E00B3F16E /* Assets.xcassets */,
 				AD21A2122045EA6E00B3F16E /* LaunchScreen.storyboard */,
 				AD21A2152045EA6E00B3F16E /* Info.plist */,

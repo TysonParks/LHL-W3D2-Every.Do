@@ -10,4 +10,10 @@
 
 @interface Todo : NSObject
 
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *todoDescript;
+@property (nonatomic) NSUInteger priorityNumber;
+@property (nonatomic) BOOL isCompleted;
+
+
 @end
