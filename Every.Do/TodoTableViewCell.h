@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  TodoTableViewCell.h
 //  Every.Do
 //
 //  Created by Tyson Parks on 2/27/18.
@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Todo.h"
 
-@class DetailViewController;
-
-@interface MasterViewController : UITableViewController
-
+@interface TodoTableViewCell : UITableViewCell
 
 @end
-

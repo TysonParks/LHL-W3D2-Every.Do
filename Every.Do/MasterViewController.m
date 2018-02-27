@@ -12,6 +12,9 @@
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+
+-(void)setupTodoCells;
+
 @end
 
 @implementation MasterViewController
@@ -23,7 +26,34 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    
+    // Instanciate Todo objects array
+    self.objects = [[NSMutableArray alloc]init];
+    
+    
+    // Call cell setup method
+    [self setupTodoCells];
+    
+    
+    
+    
+    
+    
 }
+
+// MARK: Setup Todo Cells
+-(void)setupTodoCells; {
+    
+    Todo *myTodo = [[Todo alloc]init];
+    
+    
+    
+    
+}
+
+
+
 
 
 - (void)viewWillAppear:(BOOL)animated {

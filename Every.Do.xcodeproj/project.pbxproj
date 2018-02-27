@@ -15,6 +15,7 @@
 		AD21A2142045EA6E00B3F16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD21A2122045EA6E00B3F16E /* LaunchScreen.storyboard */; };
 		AD21A2172045EA6E00B3F16E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD21A2162045EA6E00B3F16E /* main.m */; };
 		AD21A21F2045EA8900B3F16E /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD21A21E2045EA8900B3F16E /* Todo.m */; };
+		AD2973CB2045EF520047CAAD /* TodoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2973CA2045EF520047CAAD /* TodoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		AD21A2162045EA6E00B3F16E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD21A21D2045EA8900B3F16E /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		AD21A21E2045EA8900B3F16E /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		AD2973C92045EF520047CAAD /* TodoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoTableViewCell.h; sourceTree = "<group>"; };
+		AD2973CA2045EF520047CAAD /* TodoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				AD21A2042045EA6E00B3F16E /* AppDelegate.h */,
 				AD21A2052045EA6E00B3F16E /* AppDelegate.m */,
 				AD21A20D2045EA6E00B3F16E /* Main.storyboard */,
+				AD2973C92045EF520047CAAD /* TodoTableViewCell.h */,
+				AD2973CA2045EF520047CAAD /* TodoTableViewCell.m */,
 				AD21A2072045EA6E00B3F16E /* MasterViewController.h */,
 				AD21A2082045EA6E00B3F16E /* MasterViewController.m */,
 				AD21A20A2045EA6E00B3F16E /* DetailViewController.h */,
@@ -153,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD21A21F2045EA8900B3F16E /* Todo.m in Sources */,
+				AD2973CB2045EF520047CAAD /* TodoTableViewCell.m in Sources */,
 				AD21A2092045EA6E00B3F16E /* MasterViewController.m in Sources */,
 				AD21A2062045EA6E00B3F16E /* AppDelegate.m in Sources */,
 				AD21A2172045EA6E00B3F16E /* main.m in Sources */,
