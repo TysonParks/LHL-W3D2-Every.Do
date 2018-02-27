@@ -43,28 +43,10 @@
     // Instanciate Todo objects array
     self.todoObjects = [[NSMutableArray alloc]initWithObjects:buyMilk, cleanOffice, catchUp, nil];
     
-    
-    
-    
-    // Call cell setup method
-    [self setupTodoCells];
-    
-    
-    
-    
-    
-    
+ 
 }
 
-// MARK: Setup Todo Cells
--(void)setupTodoCells; {
-    
-    Todo *myTodo = [[Todo alloc]init];
-    
-    
-    
-    
-}
+
 
 
 
@@ -73,20 +55,15 @@
 - (void)viewWillAppear:(BOOL)animated {
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
+ // To be called by detail view completion button
 - (void)insertNewObject:(id)sender {
     if (!self.todoObjects) {
         self.todoObjects = [[NSMutableArray alloc] init];
     }
-    [self.todoObjects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+//    [self.todoObjects insertObject:[Todo *todo] atIndex:0]; //Fix Object
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 
@@ -95,9 +72,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.todoObjects[indexPath.row];
+        Todo *todoObject = self.todoObjects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:todoObject];
     }
 }
 
@@ -115,11 +92,14 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    TodoTableViewCell *todoCell = [tableView dequeueReusableCellWithIdentifier:@"TodoCell" forIndexPath:indexPath];
 
-    NSDate *object = self.todoObjects[indexPath.row];
-    cell.textLabel.text = [object description];
-    return cell;
+    Todo *todoObject = self.todoObjects[indexPath.row];
+    todoCell.todoTitleLabel.text = todoObject.title;
+    todoCell.todoPriorityLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)todoObject.priorityNumber];
+//    todoCell.todoCompletedButton.state =
+    return todoCell;
 }
 
 
