@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *todoTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *todoPriorityLabel;
-@property (weak, nonatomic) IBOutlet UIButton *todoCompletedButton;
+@property (weak, nonatomic) IBOutlet UILabel *todoCompletedLabel;
 
 @end
