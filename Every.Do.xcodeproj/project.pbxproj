@@ -14,6 +14,7 @@
 		AD21A2112045EA6E00B3F16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD21A2102045EA6E00B3F16E /* Assets.xcassets */; };
 		AD21A2142045EA6E00B3F16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD21A2122045EA6E00B3F16E /* LaunchScreen.storyboard */; };
 		AD21A2172045EA6E00B3F16E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD21A2162045EA6E00B3F16E /* main.m */; };
+		AD21A21F2045EA8900B3F16E /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD21A21E2045EA8900B3F16E /* Todo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		AD21A2132045EA6E00B3F16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD21A2152045EA6E00B3F16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD21A2162045EA6E00B3F16E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD21A21D2045EA8900B3F16E /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		AD21A21E2045EA8900B3F16E /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,8 @@
 		AD21A1F82045EA6E00B3F16E = {
 			isa = PBXGroup;
 			children = (
+				AD21A21D2045EA8900B3F16E /* Todo.h */,
+				AD21A21E2045EA8900B3F16E /* Todo.m */,
 				AD21A2032045EA6E00B3F16E /* Every.Do */,
 				AD21A2022045EA6E00B3F16E /* Products */,
 			);
@@ -147,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD21A21F2045EA8900B3F16E /* Todo.m in Sources */,
 				AD21A2092045EA6E00B3F16E /* MasterViewController.m in Sources */,
 				AD21A2062045EA6E00B3F16E /* AppDelegate.m in Sources */,
 				AD21A2172045EA6E00B3F16E /* main.m in Sources */,
