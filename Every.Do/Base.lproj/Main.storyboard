@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1455" y="-630"/>
         </scene>
-        <!--View Controller-->
+        <!--Editor View Controller-->
         <scene sceneID="sOd-F6-XRb">
             <objects>
-                <viewController id="g7w-JA-feS" sceneMemberID="viewController">
+                <viewController id="g7w-JA-feS" customClass="EditorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="if5-yt-ldz"/>
                         <viewControllerLayoutGuide type="bottom" id="Jhm-vr-Ku3"/>
@@ -209,7 +209,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
                     <connections>
-                        <segue destination="g7w-JA-feS" kind="presentation" id="TMi-NT-iXR"/>
+                        <segue destination="g7w-JA-feS" kind="presentation" identifier="showEditor" id="TMi-NT-iXR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>

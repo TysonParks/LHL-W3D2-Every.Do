@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Todo.h"
 #import "TodoTableViewCell.h"
+#import "EditorViewController.h"
 
 @class DetailViewController;
 

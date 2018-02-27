@@ -61,6 +61,7 @@
         self.todoObjects = [[NSMutableArray alloc] init];
     }
     
+    [ self performSegueWithIdentifier:@"showEditor" sender:self];
     
 //    [self.todoObjects insertObject:*newTodo atIndex:0]; //Fix Object
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -78,6 +79,17 @@
         [controller setDetailItem:todoObject];
     }
 }
+
+- (void)prepareForEditorSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showEditor"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        Todo *todoObject = self.todoObjects[indexPath.row];
+        EditorViewController *editorController = (EditorViewController *)[segue destinationViewController];
+        
+    }
+}
+
+
 
 
 #pragma mark - Table View
