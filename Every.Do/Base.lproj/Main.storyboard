@@ -102,9 +102,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3D4-dD-GVo" userLabel="Save New Todo">
-                                <rect key="frame" x="135" y="415" width="105" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3D4-dD-GVo" userLabel="Save New Todo">
+                                <rect key="frame" x="137.5" y="308.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="44z-Yq-S6D"/>
+                                    <constraint firstAttribute="width" constant="100" id="MTb-WO-jF1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -118,11 +121,13 @@
                             <constraint firstAttribute="trailing" secondItem="qjg-dU-ZS8" secondAttribute="trailing" constant="16" id="BBZ-ab-sVB"/>
                             <constraint firstItem="sQL-UI-HP3" firstAttribute="leading" secondItem="GOR-z8-q7X" secondAttribute="leadingMargin" id="Nec-TF-2Jm"/>
                             <constraint firstItem="5ew-k8-7me" firstAttribute="top" secondItem="if5-yt-ldz" secondAttribute="bottom" constant="57" id="Yz4-HR-h9l"/>
+                            <constraint firstItem="3D4-dD-GVo" firstAttribute="centerX" secondItem="GOR-z8-q7X" secondAttribute="centerX" id="bpH-8q-luy"/>
                             <constraint firstItem="5ew-k8-7me" firstAttribute="trailing" secondItem="GOR-z8-q7X" secondAttribute="trailingMargin" id="gSC-VP-iz5"/>
                             <constraint firstItem="qjg-dU-ZS8" firstAttribute="leading" secondItem="GOR-z8-q7X" secondAttribute="leading" constant="16" id="jaI-T2-YSb"/>
                             <constraint firstItem="5ew-k8-7me" firstAttribute="centerX" secondItem="GOR-z8-q7X" secondAttribute="centerX" id="kRi-gy-kQm"/>
                             <constraint firstItem="sQL-UI-HP3" firstAttribute="top" secondItem="5ew-k8-7me" secondAttribute="bottom" constant="8" id="m7a-HV-TCA"/>
                             <constraint firstItem="qjg-dU-ZS8" firstAttribute="top" secondItem="sQL-UI-HP3" secondAttribute="bottom" constant="8" id="yb6-Mu-iuW"/>
+                            <constraint firstItem="3D4-dD-GVo" firstAttribute="centerY" secondItem="GOR-z8-q7X" secondAttribute="centerY" id="zep-uN-e9H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dBI-zK-VN0"/>
@@ -156,9 +161,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-tD-DAO">
-                                                    <rect key="frame" x="8" y="8" width="250" height="23"/>
+                                                    <rect key="frame" x="8" y="8" width="200" height="23"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="250" id="J2z-fD-xiV"/>
+                                                        <constraint firstAttribute="width" constant="200" id="Tid-5i-MIM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="28"/>
                                                     <nil key="textColor"/>
@@ -188,14 +193,14 @@
                                                 <constraint firstItem="tXe-tD-DAO" firstAttribute="leading" secondItem="tjI-fC-2zn" secondAttribute="leadingMargin" id="5N7-RM-KO0"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="tXe-tD-DAO" secondAttribute="bottom" id="Bq7-HE-Jbq"/>
                                                 <constraint firstItem="9HF-bx-CKD" firstAttribute="top" secondItem="tjI-fC-2zn" secondAttribute="top" id="Czg-Os-UUf"/>
+                                                <constraint firstItem="9HF-bx-CKD" firstAttribute="leading" secondItem="5dc-Oh-2Hd" secondAttribute="trailing" constant="8" id="Do6-n0-3zF"/>
                                                 <constraint firstAttribute="bottom" secondItem="9HF-bx-CKD" secondAttribute="bottom" id="N43-9w-dem"/>
                                                 <constraint firstItem="5dc-Oh-2Hd" firstAttribute="centerY" secondItem="tjI-fC-2zn" secondAttribute="centerY" id="R97-aB-coV"/>
-                                                <constraint firstItem="9HF-bx-CKD" firstAttribute="leading" secondItem="5dc-Oh-2Hd" secondAttribute="trailing" constant="8" id="SbO-OL-rnh"/>
                                                 <constraint firstItem="tXe-tD-DAO" firstAttribute="top" secondItem="tjI-fC-2zn" secondAttribute="topMargin" id="Vea-0f-Z7A"/>
                                                 <constraint firstItem="9HF-bx-CKD" firstAttribute="centerY" secondItem="tjI-fC-2zn" secondAttribute="centerY" id="aq7-nL-ebw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9HF-bx-CKD" secondAttribute="trailing" id="br8-uv-hiO"/>
                                                 <constraint firstItem="tXe-tD-DAO" firstAttribute="centerY" secondItem="tjI-fC-2zn" secondAttribute="centerY" id="dDT-2k-frd"/>
                                                 <constraint firstItem="5dc-Oh-2Hd" firstAttribute="top" secondItem="tjI-fC-2zn" secondAttribute="top" id="fQg-eZ-bBy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9HF-bx-CKD" secondAttribute="trailing" id="h8y-BS-Q8P"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -229,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="-630"/>
+            <point key="canvasLocation" x="732" y="-630.13493253373315"/>
         </scene>
     </scenes>
 </document>
