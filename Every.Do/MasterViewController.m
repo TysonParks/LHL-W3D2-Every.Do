@@ -24,8 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showEditor)];
     self.navigationItem.rightBarButtonItem = addButton;
     
     // Assign self to  TableView delegate and datasource
@@ -43,8 +43,6 @@
     
     // Instanciate Todo objects array
     self.todoObjects = [[NSMutableArray alloc]initWithObjects:buyMilk, cleanOffice, catchUp, nil];
-    
- 
 }
 
 
@@ -54,22 +52,22 @@
 // MARK: EditorViewDelegate return
 -(void)editorViewController:(UIViewController *)viewController didDismissWithNewTodo:(Todo *)aTodo {
     
-    NSLog(@"Returned %@", aTodo.title);
-}
-
-
-
-
- // To be called by detail view completion button
-- (void)insertNewObject:(id)sender {
     if (!self.todoObjects) {
         self.todoObjects = [[NSMutableArray alloc] init];
     }
     
-    [ self performSegueWithIdentifier:@"showEditor" sender:self];
-    
-
+    [self.todoObjects insertObject:aTodo atIndex:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    NSLog(@"Returned %@", aTodo.title);
 }
+
+
+-(void)showEditor {
+[self performSegueWithIdentifier:@"showEditor" sender:self];
+}
+
+
 
 
 
@@ -105,11 +103,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TodoTableViewCell *todoCell = [tableView dequeueReusableCellWithIdentifier:@"TodoCell" forIndexPath:indexPath];
-
+    
     Todo *todoObject = self.todoObjects[indexPath.row];
     todoCell.todoTitleLabel.text = todoObject.title;
     todoCell.todoPriorityLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)todoObject.priorityNumber];
-//    todoCell.todoCompletedButton.state =
+    //    todoCell.todoCompletedButton.state =
     return todoCell;
 }
 
