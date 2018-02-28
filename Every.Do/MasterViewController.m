@@ -28,7 +28,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    // Assign self to delegate and datasource
+    // Assign self to  TableView delegate and datasource
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -57,6 +57,9 @@
     NSLog(@"Returned %@", aTodo.title);
 }
 
+
+
+
  // To be called by detail view completion button
 - (void)insertNewObject:(id)sender {
     if (!self.todoObjects) {
@@ -79,18 +82,11 @@
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         [controller setDetailItem:todoObject];
         
-    }
-}
-
-- (void)prepareForEditorSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showEditor"]) {
-
+    } else if ([[segue identifier] isEqualToString:@"showEditor"]) {
         EditorViewController *editorViewController = segue.destinationViewController;
         editorViewController.delegate = self;
-        
     }
 }
-
 
 
 
