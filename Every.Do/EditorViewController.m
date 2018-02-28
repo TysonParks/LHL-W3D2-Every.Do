@@ -10,6 +10,8 @@
 
 @interface EditorViewController ()
 
+
+
 @end
 
 @implementation EditorViewController
@@ -29,16 +31,13 @@
 }
 
 
--(void)segueBack {
-    
+- (IBAction)saveAndCloseEditorView:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
-- (IBAction)unwindToMainMenu:(UIStoryboardSegue*)sender
-{
-    UIViewController *sourceViewController = sender.sourceViewController;
-    // Pull any data from the view controller which initiated the unwind segue.
-}
+
+
 
 
 
