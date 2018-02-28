@@ -13,8 +13,6 @@
 
 @property NSMutableArray <Todo *> *todoObjects;
 
--(void)setupTodoCells;
-
 @end
 
 @implementation MasterViewController

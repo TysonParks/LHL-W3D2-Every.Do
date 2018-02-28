@@ -16,7 +16,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(segueBack)];
+   
+    self.navigationItem.leftBarButtonItem = backButton;
+    
+    
+//    self.navigationItem.leftBarButtonItem = self.;
+//
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(segueBack)];
+//    self.navigationItem.rightBarButtonItem = addButton;
+    
+}
+
+
+-(void)segueBack {
+    
+}
+
+
+- (IBAction)unwindToMainMenu:(UIStoryboardSegue*)sender
+{
+    UIViewController *sourceViewController = sender.sourceViewController;
+    // Pull any data from the view controller which initiated the unwind segue.
 }
 
 
