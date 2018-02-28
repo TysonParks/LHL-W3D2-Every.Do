@@ -10,7 +10,7 @@
 
 @interface EditorViewController ()
 
-
+@property (copy, nonatomic) NSArray <NSString *> *collectionArray;
 
 @end
 
@@ -18,21 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(segueBack)];
-   
-    self.navigationItem.leftBarButtonItem = backButton;
+ 
+//    self.collectionArray =
     
-    
-//    self.navigationItem.leftBarButtonItem = self.;
-//
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(segueBack)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+
     
 }
 
 
+
+
 - (IBAction)saveAndCloseEditorView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 
