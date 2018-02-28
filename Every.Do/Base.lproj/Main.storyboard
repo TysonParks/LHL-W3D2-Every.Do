@@ -126,6 +126,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dBI-zK-VN0"/>
+                    <connections>
+                        <outlet property="editorDescriptionLabel" destination="qjg-dU-ZS8" id="FwZ-3A-ls1"/>
+                        <outlet property="editorPriorityLabel" destination="sQL-UI-HP3" id="LGW-ob-Wz1"/>
+                        <outlet property="editorTitleLabel" destination="5ew-k8-7me" id="ZkI-cx-07I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEx-kh-9P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

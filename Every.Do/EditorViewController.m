@@ -10,6 +10,12 @@
 
 @interface EditorViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *editorTitleLabel;
+@property (weak, nonatomic) IBOutlet UITextField *editorPriorityLabel;
+@property (weak, nonatomic) IBOutlet UITextView *editorDescriptionLabel;
+
+
+
 @property (copy, nonatomic) NSArray <NSString *> *collectionArray;
 
 @end
@@ -19,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-//    self.collectionArray =
+    
     
 
     
@@ -29,6 +35,13 @@
 
 
 - (IBAction)saveAndCloseEditorView:(id)sender {
+    
+    
+    
+    self.collectionArray = [[NSArray alloc] initWithObjects:self.editorTitleLabel.text, self.editorPriorityLabel.text, self.editorDescriptionLabel.text, nil];
+    NSLog(@"This is my new array: %@, %@, %@", self.collectionArray[0], self.collectionArray[1], self.collectionArray[2]);
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
