@@ -12,10 +12,10 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *todoDescript;
-@property (nonatomic) NSUInteger priorityNumber;
+@property (nonatomic) NSInteger priorityNumber;
 @property (nonatomic) BOOL isCompleted;
 
 // Custom init
--(instancetype)initWithTitle:(NSString *) title todoDescription:(NSString *) todoDescript priority: (NSUInteger) priorityNumber;
+-(instancetype)initWithTitle:(NSString *) title todoDescription:(NSString *) todoDescript priority: (NSInteger) priorityNumber;
 
 @end

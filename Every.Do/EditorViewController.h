@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Todo.h"
+
+@protocol EditorViewControllerDelegate;
 
 @interface EditorViewController : UIViewController
 
+//@property (nonatomic, strong) Todo *aNewTodo;
+@property (nonatomic, weak)id<EditorViewControllerDelegate> delegate;
+
+@end
 
 
+@protocol EditorViewControllerDelegate <NSObject>
+
+-(void)editorViewController: (UIViewController *) viewController didDismissWithNewTodo: (Todo *) aTodo;
 
 @end

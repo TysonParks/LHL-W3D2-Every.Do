@@ -8,6 +8,7 @@
 
 #import "EditorViewController.h"
 
+
 @interface EditorViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *editorTitleLabel;
@@ -24,11 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
-    
-    
 
-    
 }
 
 
@@ -36,19 +33,15 @@
 
 - (IBAction)saveAndCloseEditorView:(id)sender {
     
-    
-    
-    self.collectionArray = [[NSArray alloc] initWithObjects:self.editorTitleLabel.text, self.editorPriorityLabel.text, self.editorDescriptionLabel.text, nil];
-    NSLog(@"This is my new array: %@, %@, %@", self.collectionArray[0], self.collectionArray[1], self.collectionArray[2]);
-    
+    Todo *aNewTodo = [[Todo alloc]initWithTitle:self.editorTitleLabel.text todoDescription:self.editorDescriptionLabel.text priority:[self.editorPriorityLabel.text integerValue]];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    [self.delegate editorViewController:self didDismissWithNewTodo:aNewTodo];
+    
+    //    self.collectionArray = [[NSArray alloc] initWithObjects:self.editorTitleLabel.text, self.editorPriorityLabel.text, self.editorDescriptionLabel.text, nil];
+    //    NSLog(@"This is my new array: %@, %@, %@", self.collectionArray[0], self.collectionArray[1], self.collectionArray[2]);
 }
-
-
-
-
 
 
 

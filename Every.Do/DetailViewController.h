@@ -6,16 +6,17 @@
 //  Copyright © 2018 Tyson Parks. All rights reserved.
 //
 
-@protocol <EditorViewControllerDelegate>
 
-@end
 
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
 
+
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end
+
+
 

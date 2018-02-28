@@ -7,9 +7,12 @@
 //
 
 #import "MasterViewController.h"
+#import "Todo.h"
+#import "TodoTableViewCell.h"
+#import "EditorViewController.h"
 #import "DetailViewController.h"
 
-@interface MasterViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface MasterViewController () <UITableViewDelegate, UITableViewDataSource, EditorViewControllerDelegate>
 
 @property NSMutableArray <Todo *> *todoObjects;
 
@@ -45,12 +48,13 @@
 }
 
 
-
-
-
-
-
 - (void)viewWillAppear:(BOOL)animated {
+}
+
+// MARK: EditorViewDelegate return
+-(void)editorViewController:(UIViewController *)viewController didDismissWithNewTodo:(Todo *)aTodo {
+    
+    NSLog(@"Returned %@", aTodo.title);
 }
 
  // To be called by detail view completion button
@@ -61,10 +65,9 @@
     
     [ self performSegueWithIdentifier:@"showEditor" sender:self];
     
-//    [self.todoObjects insertObject:*newTodo atIndex:0]; //Fix Object
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
 }
+
 
 
 #pragma mark - Segues
@@ -75,14 +78,15 @@
         Todo *todoObject = self.todoObjects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         [controller setDetailItem:todoObject];
+        
     }
 }
 
 - (void)prepareForEditorSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showEditor"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        Todo *todoObject = self.todoObjects[indexPath.row];
-        EditorViewController *editorController = (EditorViewController *)[segue destinationViewController];
+
+        EditorViewController *editorViewController = segue.destinationViewController;
+        editorViewController.delegate = self;
         
     }
 }
